@@ -39,7 +39,6 @@ export default function Page() {
   return (
     <>
       <div className="" style={{ top: "300px", backgroundColor: "#f1f1f1" }}>
-        <h1 className="text-2xl font-bold">Danh sách ghi chú</h1>
         {errorCount > 0 && (
           <ErrorList errorCount={errorCount} errors={errors} />
         )}

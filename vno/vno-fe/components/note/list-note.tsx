@@ -27,8 +27,15 @@ export const NoteList: React.FC<NoteListProps> = ({ notes, isLoading }) => {
   }
 
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-4 relative">
+      <h1 className="text-2xl font-bold sticky top-0 bg-cyan-50">
+        Danh sách ghi chú
+      </h1>
+
       {notes.map((note) => (
+        // <div className="" key={note.id}>
+        //   key={note.id}
+        // </div>
         <NoteItem key={note.id} note={note} />
       ))}
     </div>
