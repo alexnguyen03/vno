@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import NoteOverview from "../../types/note-overview";
+import { NoteOverview } from '../../types/note-overview';
 
 const NoteItem: React.FC<{ note: NoteOverview }> = ({ note }) => (
   <Card>

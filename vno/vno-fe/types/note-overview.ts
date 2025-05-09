@@ -1,8 +1,12 @@
-interface NoteOverview {
+export interface NoteOverview {
   id: number;
   title: string;
   mainContent: string;
   createdAt: Date;
   modifiedAt: Date;
 }
-export default NoteOverview;
+
+export interface ListNoteGroupedByDate {
+  date: Date; // YYYY-MM-DD
+  notes: NoteOverview[];
+}

@@ -1,0 +1,21 @@
+# EditorConfig root file
+root = true
+
+# Các quy tắc chung áp dụng cho tất cả file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Cấu hình cho file JavaScript/TypeScript trong thư mục src (Next.js)
+[src/**/*.{js,jsx,ts,tsx}]
+indent_style = space
+indent_size = 2
+max_line_length = 120
+
+# Cấu hình cho file Java trong dự án Spring
+[**/*.java]
+indent_style = space
+indent_size = 4
+max_line_length = 120
