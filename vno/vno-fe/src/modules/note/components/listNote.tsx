@@ -1,17 +1,18 @@
 'use client';
-import { Loader2 } from 'lucide-react';
+
 import { useEffect, useState } from 'react';
-import { ListNoteGroupedByDate, NoteOverview } from '@/src/modules/note/types/noteType';
-import { ListNoteGroupByDate } from './listNoteGrouped';
+import QuillEditor from './QuillEditor';
+import { ListNoteGroupedByDate, NoteOverview } from '../types/noteType';
+import JobListingComponent from './JobListingComponent';
 import { groupNotesByDate } from '../utils/noteUtils';
+import { ListNoteGroupByDate } from './listNoteGrouped';
+import { Loader2 } from 'lucide-react';
 
-interface NoteListProps {
-  notes: NoteOverview[];
-  isLoading: boolean;
-}
+export const NoteList: React.FC<{ notes: NoteOverview[]; isLoading: boolean }> = ({ notes, isLoading }) => {
+  const [content, setContent] = useState('<p>Hello World!</p>');
 
-export const NoteList: React.FC<NoteListProps> = ({ notes, isLoading }) => {
   const [groupedNotes, setGroupedNotes] = useState<ListNoteGroupedByDate[]>([]);
+  // const [notes, setNotes] = useState<NoteOverview[]>([]);
 
   useEffect(() => {
     const grouped = groupNotesByDate(notes);
@@ -30,14 +31,19 @@ export const NoteList: React.FC<NoteListProps> = ({ notes, isLoading }) => {
   if (notes.length === 0) {
     return <div className="text-center text-muted-foreground py-8">Không có ghi chú nào.</div>;
   }
+  // ...phần groupNotesByDate giữ nguyên...
+
   return (
-    <div className="relative">
-      <h1 className="text-2xl font-bold sticky top-0 dark:bg-gray-800  bg-white sm:text-center lg:text-left z-100">
-        Danh sách ghi chú
-      </h1>
-      {groupedNotes.map((group) => {
-        return <ListNoteGroupByDate key={group.date.toLocaleString()} date={group.date} notes={group.notes} />;
-      })}
+    <div>
+      <h2>Danh sách ghi chú</h2>
+      <JobListingComponent notes={notes} />
+      {/* <h3>Kết quả HTML:</h3>
+        <QuillEditor value={content} onChange={setContent} />
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+
+       {groupedNotes.map((group) => {
+         return <ListNoteGroupByDate key={group.date.toLocaleString()} date={group.date} notes={group.notes} />;
+       })} */}
     </div>
   );
 };

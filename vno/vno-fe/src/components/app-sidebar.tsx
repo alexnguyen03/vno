@@ -18,7 +18,8 @@ import {
 import { Calendar } from './ui/calendar';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ThemeToggle } from './themeToggle';
+import { ThemeToggle } from './theme-toggle';
+import ColorPalettePreview from './common/ColorPaletteTailwindFullWrap';
 // This is sample data
 const data = {
   user: {
@@ -42,6 +43,12 @@ const data = {
     {
       title: 'Journaling',
       url: 'journals',
+      icon: Send,
+      isActive: false,
+    },
+    {
+      title: 'colors',
+      url: 'colors',
       icon: Send,
       isActive: false,
     },
@@ -216,7 +223,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarContent>
           <SidebarGroup className="px-0">
             <SidebarGroupContent>
-              {activeItem.url === data.navMain[0].url && <div className="">note side bar content</div>}
+              {activeItem.url === data.navMain[0].url && <div className="">notes content</div>}
               {activeItem.url === data.navMain[1].url && <div className="">plans side bar content</div>}
               {activeItem.url === data.navMain[2].url && <div className="">journals side bar content</div>}
               {mails.map((mail) => (

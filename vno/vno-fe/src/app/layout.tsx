@@ -13,7 +13,7 @@ import {
 import { Separator } from '@/src/components/ui/separator';
 import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/src/components/ui/sidebar';
 import { ScrollArea } from '@radix-ui/react-scroll-area';
-import { ThemeProvider } from '../components/themeProvider';
+import { ThemeProvider } from '../components/theme-provider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

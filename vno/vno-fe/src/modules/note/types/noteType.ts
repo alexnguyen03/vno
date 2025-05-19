@@ -4,6 +4,8 @@ export interface NoteOverview {
   mainContent: string;
   createdAt: Date;
   modifiedAt: Date;
+  isPinned: boolean;
+  color: string;
 }
 
 export interface ListNoteGroupedByDate {

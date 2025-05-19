@@ -5,8 +5,8 @@ import { getTimeAgo } from '../utils/noteUtils';
 export const ListNoteGroupByDate: React.FC<ListNoteGroupedByDate> = ({ date, notes }) => {
   const title = getTimeAgo(date);
   return (
-    <div className="bg-amber-50 mb-3">
-      <div className="flex justify-start sticky top-8 bg-amber-50 mb-3">
+    <div className=" mb-3">
+      <div className="flex justify-start sticky top-8 bg-white mb-3">
         <p className="ms-2 text-lg font-semibold">{notes.length}</p>
         <p className="ms-2 text-lg font-semibold text-gray-500">{title}</p>
         <p className="ms-2 text-lg italic">{date.toLocaleString()}</p>
