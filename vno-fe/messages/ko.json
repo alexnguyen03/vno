@@ -1,0 +1,36 @@
+{
+  "langdingPage": {
+    "metadata": {
+      "title": "Welcome back FUUUU",
+      "description": "Please enter your details."
+    }
+  },
+  "AppLayout": {
+    "home": "Trang chủ",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "HomePage": {
+    "title": "Trang Chủ"
+  },
+  "LocaleSwitcher": {
+    "de": "Deutsch",
+    "en": "Tiếng Anh",
+    "vi": "Tiếng Việt",
+    "label": "Language"
+  },
+  "LoginPage": {
+    "credentials": "Credentials: jane@doe.com / next-intl",
+    "description": "Please enter your details.",
+    "email": "Email",
+    "invalidCredentials": "Please check your credentials.",
+    "invalidEmail": "Please enter a valid email address.",
+    "invalidPassword": "Please enter a password.",
+    "login": "Sign in",
+    "password": "Password",
+    "title": "Welcome back"
+  },
+  "ProfilePage": {
+    "title": "Profile"
+  }
+}
